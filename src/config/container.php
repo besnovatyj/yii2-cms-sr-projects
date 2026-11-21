@@ -19,7 +19,7 @@ use Besnovatyj\TreeManager\Manager\TreeQueryScope;
  */
 return function (\yii\di\Container $container): void {
     $container->setSingleton('SRProjects.tree.manager', function () use ($container) {
-        $galleriesRepo = new SRProjectRepository();
+        $projectsRepo = new SRProjectRepository();
         return new TreeManager(
             modelClass: Category::class,
             entityFactory: function (TreeNodeFormInterface $form): Category {
@@ -48,10 +48,10 @@ return function (\yii\di\Container $container): void {
                 );
                 return $node;
             },
-            deleteGuard: function (Node $node) use ($galleriesRepo): void {
+            deleteGuard: function (Node $node) use ($projectsRepo): void {
                 /** @var Category $node */
                 // TODO нет проверки на запрет удаления родительской, если к дочерней привязаны элементы
-                if ($galleriesRepo->existsByMainCategory($node->id)) {
+                if ($projectsRepo->existsByMainCategory($node->id)) {
                     throw new DomainException('Unable to remove taxonomy with performances.');
                 }
             },

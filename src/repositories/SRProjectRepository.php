@@ -42,7 +42,7 @@ class SRProjectRepository
                 if ($srProject->save()) {
                     return true;
                 }
-                throw new RuntimeException('Failed to save gallery.');
+                throw new RuntimeException('Failed to save project.');
             } catch (Exception $e) {
                 if ($e->errorInfo[1] == 1213) { // Код ошибки дедлока
                     $retryCount++;

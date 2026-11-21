@@ -8,7 +8,7 @@ use Besnovatyj\Contracts\adminMenu\AdminMenuLocation;
 use Besnovatyj\Contracts\adminMenu\AdminMenuPlacement;
 
 return [
-    // Galleries
+    // Проекты
     [
         'label' => 'Проекты',
         'iconClass' => 'bi bi-images me-1',

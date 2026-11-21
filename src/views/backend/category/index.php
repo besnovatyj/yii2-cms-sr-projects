@@ -20,7 +20,7 @@ $this->title = $title;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="gallery-category-tree-index">
+<div class="category-tree-index">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1><?= Html::encode($this->title) ?></h1>
 

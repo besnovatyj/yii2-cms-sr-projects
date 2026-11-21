@@ -42,11 +42,10 @@ class Image extends BaseImage
     protected static function getThumbProfiles(): array
     {
         return [
-            'admin'          => ['width' => 70,   'height' => 100], // /backend/gallery/index
-            'thumb'          => ['width' => 640,  'height' => 480], // /backend/gallery/view
-            'gallery_widget' => ['width' => 1200, 'height' => 600], // /frontend/gallery/widget
-            'frontend_list'  => ['width' => 1200, 'height' => 600], // /frontend/gallery/index
-            'frontend_item'  => ['width' => 1200, 'height' => 600], // /frontend/gallery/view
+            'admin'          => ['width' => 70,   'height' => 100],
+            'thumb'          => ['width' => 640,  'height' => 480],
+            'frontend_list'  => ['width' => 1200, 'height' => 600],
+            'frontend_item'  => ['width' => 1200, 'height' => 600],
         ];
     }
 

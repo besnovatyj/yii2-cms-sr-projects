@@ -31,13 +31,13 @@ if ($model->parentId !== null) {
 <div class="card">
     <div class="card-header d-md-flex justify-content-md-between">
         <div class="pt-1">Meta</div>
-        <a class="btn btn-sm collapse-button" data-bs-toggle="collapse" href="#gallery-category" role="button"
+        <a class="btn btn-sm collapse-button" data-bs-toggle="collapse" href="#proj-category" role="button"
            aria-expanded="false" aria-controls="collapseExample">
             <i class="bi bi-plus-lg"></i>
             <i class="bi bi-dash-lg"></i>
         </a>
     </div>
-    <div class="collapse" id="gallery-category">
+    <div class="collapse" id="proj-category">
         <div class="card-body">
 
             <?= $form->field($model->meta, 'title')->textInput() ?>

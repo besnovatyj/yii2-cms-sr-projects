@@ -98,7 +98,7 @@ class Module extends CmsModule implements
         $map = [];
         foreach (SRProject::find()->with('mainImage', 'category')->orderBy(['id' => SORT_ASC])->all() as $srProject) {
             /* @var SRProject $srProject */
-            $map[(string)$srProject->id] = $srProject->name;
+            $map[(string)$srProject->id] = (string)$srProject->name;
         }
         return $map;
     }
@@ -138,7 +138,7 @@ class Module extends CmsModule implements
      */
     private function categorySlugMap(): array
     {
-        return new TreeQueryScope(Category::class)->dropdownTree(indent: '— ', keyAttribute: 'slug');
+        return new TreeQueryScope(Category::class)->dropdownTree(keyAttribute: 'slug', indent: '— ');
     }
 
 }
