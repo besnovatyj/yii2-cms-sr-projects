@@ -4,7 +4,7 @@
  * Copyright (c) 2026 Besnovatyj. Licensed under the MIT License.
  */
 
-namespace Besnovatyj\SRProjects\entities\SRProject;
+namespace Besnovatyj\SRProjects\entities\srProject;
 
 use Besnovatyj\DomainEvents\AggregateRoot;
 use Besnovatyj\DomainEvents\EventTrait;

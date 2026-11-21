@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Besnovatyj\SRProjects\entities\SRProject;
+namespace Besnovatyj\SRProjects\entities\srProject;
 
 use Besnovatyj\Images\base\BaseImage;
 
