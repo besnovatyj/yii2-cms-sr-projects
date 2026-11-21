@@ -5,7 +5,7 @@
  */
 
 return [
-    'id' => 'SRProject',
+    'id' => 'SRProjects',
     'params' => [
         'iconClass' => 'bi bi-image',
     ],
