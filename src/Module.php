@@ -24,7 +24,7 @@ class Module extends CmsModule implements
     ProvidesDirectories, ProvidesMigrations, MenuTargetProvider
 {
     public const bool EDITABLE = true;
-    public const string MODULE_ID = 'SRProject';
+    public const string MODULE_ID = 'SRProjects';
 
     public static function moduleId(): string
     {
