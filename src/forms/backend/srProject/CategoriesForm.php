@@ -4,7 +4,7 @@
  * Copyright (c) 2026 Besnovatyj. Licensed under the MIT License.
  */
 
-namespace Besnovatyj\SRProjects\forms\backend\SRProject;
+namespace Besnovatyj\SRProjects\forms\backend\srProject;
 
 use Besnovatyj\SRProjects\entities\Category;
 use Besnovatyj\SRProjects\entities\srProject\SRProject;
