@@ -66,8 +66,8 @@ class Module extends CmsModule implements
     public function aliasTargets(): array
     {
         return [
-            new AliasTarget('/SRProject/sr-project/sr-project', 'Проекты', 'id'),
-            new AliasTarget('/SRProject/sr-project/category', 'Раздел проектов', 'slug'),
+            new AliasTarget('/SRProjects/sr-project/sr-project', 'Проекты', 'id'),
+            new AliasTarget('/SRProjects/sr-project/category', 'Раздел проектов', 'slug'),
         ];
     }
 
@@ -82,8 +82,8 @@ class Module extends CmsModule implements
     public function aliasSlugs(string $route): array
     {
         return match (ltrim($route, '/')) {
-            '/SRProject/sr-project/sr-project' => $this->projectsIdMap(),
-            '/SRProject/sr-project/category' => $this->categorySlugMap(),
+            '/SRProjects/sr-project/sr-project' => $this->projectsIdMap(),
+            '/SRProjects/sr-project/category' => $this->categorySlugMap(),
             default => [],
         };
     }
@@ -112,8 +112,8 @@ class Module extends CmsModule implements
     public function menuTargets(): array
     {
         return [
-            new MenuTarget('/SRProject/sr-project/category', 'Категория проектов', 'slug'),
-            new MenuTarget('/SRProject/sr-project/sr-project', 'Проект', 'id'),
+            new MenuTarget('/SRProjects/sr-project/category', 'Категория проектов', 'slug'),
+            new MenuTarget('/SRProjects/sr-project/sr-project', 'Проект', 'id'),
         ];
     }
 
