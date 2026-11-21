@@ -82,8 +82,8 @@ class Module extends CmsModule implements
     public function aliasSlugs(string $route): array
     {
         return match (ltrim($route, '/')) {
-            '/SRProjects/sr-project/sr-project' => $this->projectsIdMap(),
-            '/SRProjects/sr-project/category' => $this->categorySlugMap(),
+            'SRProjects/sr-project/sr-project' => $this->projectsIdMap(),
+            'SRProjects/sr-project/category' => $this->categorySlugMap(),
             default => [],
         };
     }
@@ -138,7 +138,7 @@ class Module extends CmsModule implements
      */
     private function categorySlugMap(): array
     {
-        return new TreeQueryScope(Category::class)->dropdownTree(keyAttribute: 'slug', indent: '— ');
+        return new TreeQueryScope(Category::class)->dropdownTree(indent: '— ', keyAttribute: 'slug');
     }
 
 }
