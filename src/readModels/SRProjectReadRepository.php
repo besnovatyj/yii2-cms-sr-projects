@@ -6,12 +6,8 @@
 
 namespace Besnovatyj\SRProjects\readModels;
 
-use Besnovatyj\Contracts\search\SearchDocument;
-use Besnovatyj\Contracts\sitemap\SitemapUrl;
 use Besnovatyj\SRProjects\entities\Category;
 use Besnovatyj\SRProjects\entities\srProject\SRProject;
-use Besnovatyj\Tags\entities\Tag;
-use Besnovatyj\Contracts\tags\TaggedItem;
 use Besnovatyj\TreeManager\Manager\TreeQueryScope;
 use yii\data\ActiveDataProvider;
 use yii\data\DataProviderInterface;

@@ -7,14 +7,12 @@
 namespace Besnovatyj\SRProjects\forms\backend\SRProject;
 
 use Besnovatyj\Forms\CompositeForm;
-use Besnovatyj\Tags\forms\backend\TagsForm;
 use Besnovatyj\Meta\MetaForm;
 use Besnovatyj\SRProjects\entities\srProject\SRProject;
 
 /**
  * @property MetaForm $meta
  * @property CategoriesForm $categories
- * @property TagsForm $tags
  */
 class SRProjectForm extends CompositeForm
 {
@@ -30,11 +28,9 @@ class SRProjectForm extends CompositeForm
             $this->status = $srProject->status;
             $this->meta = new MetaForm($srProject->meta);
             $this->categories = new CategoriesForm($srProject);
-            $this->tags = new TagsForm($srProject->tags);
         } else {
             $this->meta = new MetaForm();
             $this->categories = new CategoriesForm();
-            $this->tags = new TagsForm();
         }
         parent::__construct($config);
     }
@@ -52,14 +48,23 @@ class SRProjectForm extends CompositeForm
 
     protected function internalForms(): array
     {
-        return ['meta', 'categories', 'tags'];
+        return ['meta', 'categories'];
     }
 
     public function statusList(): array
     {
         return [
-            SRProject::STATUS_DRAFT => 'DRAFT',
-            SRProject::STATUS_ACTIVE => 'ACTIVE',
+            SRProject::STATUS_DRAFT => 'ВЫКЛ',
+            SRProject::STATUS_ACTIVE => 'ВКЛ',
+        ];
+    }
+
+    public function attributeLabels(): array
+    {
+        return [
+            'name' => 'Название',
+            'description' => 'Описание',
+            'status' => 'Статус',
         ];
     }
 }

@@ -14,9 +14,6 @@ use Besnovatyj\Helpers\FilesystemHelper;
 use Besnovatyj\Meta\Meta;
 use Besnovatyj\Meta\MetaBehavior;
 use Besnovatyj\PessimisticLock\PessimisticLockBehavior;
-use Besnovatyj\Tags\entities\Tag;
-use Besnovatyj\Tags\entities\TagAssignment;
-use Besnovatyj\Tags\entities\TaggableEntityTrait;
 use DateTimeImmutable;
 use DomainException;
 use Throwable;
@@ -37,8 +34,6 @@ use yii\db\StaleObjectException;
  *
  * @property Meta $meta
  * @property Category $category
- * @property TagAssignment[] $tagAssignments
- * @property Tag[] $tags
  * @property Image[] $images
  * @property Image $mainImage
  *
@@ -169,6 +164,16 @@ class SRProject extends ActiveRecord implements AggregateRoot
     }
 
     // </editor-fold>
+
+    public function attributeLabels(): array
+    {
+        return [
+            'id' => 'Айди',
+            'name' => 'Название',
+            'category_id' => 'Категория',
+            'status' => 'Статус',
+        ];
+    }
 
     public static function tableName(): string
     {
