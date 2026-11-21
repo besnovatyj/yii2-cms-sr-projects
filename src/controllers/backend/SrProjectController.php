@@ -27,7 +27,7 @@ use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 
-class SRProjectController extends Controller
+class SrProjectController extends Controller
 {
     use ControllerTrait;
     use UrlManagerHelperTrait;

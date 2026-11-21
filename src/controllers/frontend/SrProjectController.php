@@ -12,7 +12,7 @@ use Besnovatyj\SRProjects\readModels\SRProjectReadRepository;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
-class SRProjectController extends Controller
+class SrProjectController extends Controller
 {
     private SRProjectReadRepository $projects;
     private CategoryReadRepository $categories;

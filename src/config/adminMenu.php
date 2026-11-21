@@ -12,9 +12,9 @@ return [
     [
         'label' => 'Проекты',
         'iconClass' => 'bi bi-images me-1',
-        'url' => ['/SRProject/backend/sr-project/index'],
+        'url' => ['/SRProjects/backend/sr-project/index'],
         'active' => static function () {
-            return str_contains(\Yii::$app->request->url, 'SRProject/backend/sr-project');
+            return str_contains(\Yii::$app->request->url, 'SRProjects/backend/sr-project');
         },
         '_meta' => [
             'placements' => [
@@ -32,9 +32,9 @@ return [
     [
         'label' => 'Категории',
         'iconClass' => 'bi bi-diagram-3 me-1',
-        'url' => ['/SRProject/backend/category/index'],
+        'url' => ['/SRProjects/backend/category/index'],
         'active' => static function () {
-            return str_contains(\Yii::$app->request->url, 'SRProject/backend/category');
+            return str_contains(\Yii::$app->request->url, 'SRProjects/backend/category');
         },
         '_meta' => [
             'placements' => [
